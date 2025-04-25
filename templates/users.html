@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Users</title>
+</head>
+<body>
+    <h1>All Users</h1>
+    {% if users %}
+        <ul>
+        {% for user in users %}
+            <li>{{ user.name }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No users found.</p>
+    {% endif %}
+    <p><a href="/add-user">Add Another User</a></p>
+    <p><a href="/">Home</a></p>
+
+</body>
+</html>
